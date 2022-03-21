@@ -1,0 +1,11 @@
+<mat-card class="card outline">
+    <mat-tab-group (selectedTabChange)="onLinkClick($event)">
+        <div  *ngFor="let item of tabs">
+        <mat-tab label=" Editor {{item.Tabnumber}}"> 
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Enter your Query">
+              </mat-form-field>
+        </mat-tab>
+    </div>
+      </mat-tab-group>
+  </mat-card>
