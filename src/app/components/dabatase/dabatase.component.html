@@ -1,8 +1,6 @@
 <mat-card class="card outline">
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-        <!-- This is the tree node template for leaf nodes -->
         <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-            <!-- use a disabled button to provide padding for tree leaf -->
             <mat-list-item>
                 <mat-icon>storage</mat-icon> {{node.name}}
 
@@ -10,7 +8,6 @@
             </mat-list-item>
 
         </mat-tree-node>
-        <!-- This is the tree node template for expandable nodes -->
         <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
 
             <mat-list-item>
